@@ -220,3 +220,78 @@ body, html {
     padding: 20px;
     box-sizing: border-box;
 }
+
+
+/* Wrapper containing the entire content */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header section with title and logo aligned */
+.header {
+    display: flex;
+    justify-content: space-between; /* Align title left and logo right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Logo styling */
+.logo {
+    max-width: 175px;
+    height: auto;
+}
+
+/* Input Section */
+.input-section {
+    text-align: left; /* Align inputs to the left */
+    margin-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #969696;
+    text-align: center;
+}
+
+/* Adjust the heading styles */
+.header h1 {
+    margin-bottom: 5px;  /* Reduce the space below the heading */
+}
+
+/* Optional: Adjust the input-section margin if needed */
+.input-section {
+    margin-top: 0;  /* Remove any top margin if it exists */
+    margin-bottom: 10px;  /* Reduce space between inputs and heading */
+}
+
+
+
+/* Style for buttons */
+.button-container button,
+.save-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #FF4713;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect */
+.button-container button:hover,
+.save-button:hover {
+    background-color: #FF9B7F;  /* Darker background on hover */
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
