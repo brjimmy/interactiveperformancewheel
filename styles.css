@@ -1,0 +1,222 @@
+/* Set Arial as the global font */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align content to the top */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Wrapper to contain the entire content */
+.wrapper {
+    width: 100%; 
+    max-width: 1200px; /* Keep the max-width at 1200px */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.input-section {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-container div {
+    flex: 1 1 calc(20% - 10px); /* Adjust the width to 20% - 10px gap */
+    box-sizing: border-box;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 5px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    border: 2px solid #000; /* Initially black border */
+    border-radius: 5px;
+    text-transform: capitalize; /* Ensure title case */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.button-container {
+    text-align: center; /* Center align */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #999;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(3 * (20% - 10px) + 20px); /* Match the length of 3 input boxes */
+}
+
+.main-content {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Fix the size of the canvas container */
+#canvas-container {
+    width: 625px;  /* Fixed width */
+    height: 625px; /* Fixed height */
+    position: relative; /* Ensure the canvas stays in place */
+}
+
+/* Prevent the canvas from resizing */
+canvas {
+    width: 100%; /* Keep it 100% of the fixed container */
+    height: 100%; /* Maintain aspect ratio within the fixed size */
+    display: block; /* Avoid inline space issues */
+}
+
+.segment-value {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #000;
+    padding: 1px 4px; /* Adjust padding */
+    border-radius: 5px;
+    user-select: none;
+    font-size: 12px; /* Reduce font size to 12px */
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #000;
+    padding-left: 20px;
+    margin-left: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+th.category-column {
+    width: 300px; /* Increased width for category column */
+}
+
+th.value-column {
+    width: 100px; /* Reduced width for value column */
+    text-align: center; /* Center align */
+}
+
+td.value-column {
+    text-align: center; /* Center align data */
+}
+
+.save-button-container {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.save-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #999;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #000;
+}
+
+.category-cell {
+    display: flex;            /* Use Flexbox for alignment */
+    align-items: center;      /* Vertically center the items */
+    gap: 10px;                /* Add space between the color box and text */
+    flex-direction: row;      /* Ensure items are in a row (one line) */
+}
+
+
+
+h1 {
+    font-family: Arial, sans-serif; /* Ensure Arial is used */
+    font-size: 32px;               /* Adjust the size */
+    font-weight: bold;             /* Set the weight */
+    text-align: center;            /* Center the text horizontally */
+    color: #333;                   /* Adjust the color (dark gray) */
+    margin-bottom: 30px;           /* Space below the heading */
+    line-height: 1.5;              /* Adjust line spacing if needed */
+}
+
+
+
+#canvas-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    margin: 20px auto; /* Center canvas with some margin */
+    width: 625px; /* Adjust the size as needed */
+    height: 625px;
+}
+
+canvas {
+    border: 0px solid #000; /* Add a border (optional) */
+    border-radius: 50%; /* Make sure it looks circular */
+    width: 100%; /* Ensure it fills the container */
+    height: 100%; /* Ensure it stays proportional */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+/* Optional: Ensure other elements maintain their size */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.wrapper {
+    width: 1200px; /* Fixed width for the entire layout */
+    margin: auto; /* Center the content horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+}
